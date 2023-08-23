@@ -53,3 +53,42 @@ def getEmployee(employee_name, ine = None):
 employee_name = input("Ingresa tu nombre: ")
 employee_ine = input("Ingresa el INE: ")
 print(getEmployee(employee_name, employee_ine))
+
+
+print("\n######### Ejemplo 5 función ########")
+
+def greet(name = None):
+    result = ""
+    if name != "":
+        result = f"Saludos {name}!!!"
+    else:
+        result = "Hola extraño!!" 
+    return result
+
+name = input("Escribe tu nombre: ")
+print(greet(name))
+
+print("\n######### Ejemplo 6 función ########")
+
+def getName(name):
+    text = f"El nombre es {name}"
+    return text
+
+def getLastName(last_name):
+    text = f"Los apellidos son {last_name}"
+    return text
+
+def getFullName(name, last_name):
+    result = getName(name) + "\n" + getLastName(last_name)
+    return result
+
+name = "Alexis"
+last_name = "Solís Rodríguez"
+print(getFullName(name, last_name))
+
+print("\n######### Ejemplo 7 función ########")
+# Funciones Lambda 
+
+current_year = lambda year: f"El años es {year}"
+
+print(current_year(2023))
