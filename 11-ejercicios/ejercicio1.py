@@ -21,8 +21,11 @@ print(numbers)
 print("\nMostrar la longitud de la lista.")
 print(len(numbers))
 print("\nBuscar algún elemento que el usuario ingrese por teclado.")
-number = int(input("Ingresa el número para buscar en la lista: "))
-if number in numbers:
-    print(f"El número existe en la posición: {numbers.index(number) + 1} ")
-else:
-    print("El número ingresado no se encuentra en la lista.")
+try:
+    number = int(input("Ingresa el número para buscar en la lista: "))
+    if number in numbers:
+        print(f"El número existe en la posición: {numbers.index(number) + 1} ")
+    else:
+        print("El número ingresado no se encuentra en la lista.")
+except:    
+    print("Error....Ingresa números enteros.")
